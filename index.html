@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="style.css" media="all" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Stats preview card component</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="card">
+        <picture>
+          <source
+            srcset="
+              ./images/image-header-mobile.jpg  1x,
+              ./images/image-header-desktop.jpg 2x
+            "
+          />
+          <img
+            class="hero"
+            src="images/image-header-mobile.jpg"
+            alt="People in office space"
+          />
+        </picture>
+        <div class="card-body">
+          <h1 class="title">
+            Get <span>insights</span> that help your business grow.
+          </h1>
+          <p class="description">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <section class="details">
+            <div class="detail">
+              <h2 class="detail__amount">10k+</h2>
+              <span class="detail__text">companies</span>
+            </div>
+            <div class="detail">
+              <h2 class="detail__amount">314</h2>
+              <span class="detail__text">templates</span>
+            </div>
+            <div class="detail">
+              <h2 class="detail__amount">12M+</h2>
+              <span class="detail__text">queries</span>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </body>
+</html>
