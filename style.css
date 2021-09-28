@@ -1,5 +1,10 @@
 @font-face {
   font-family: 'Red Hat Display';
+  src: url('./fonts/RedHatDisplay-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
   font-weight: 500;
   src: url('./fonts/RedHatDisplay-Medium.ttf');
 }
@@ -73,19 +78,23 @@ body {
 }
 
 body {
-  background-color: var(--very-pale-blue);
+  background-color: var(--pale-blue);
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position-y: -20px;
+  background-size: max(675px, 100%);
 }
 
 .wrapper {
   max-width: calc(var(--mobile) - 44px);
-  margin: 150px auto;
+  margin: 100px auto;
 }
 
 .card {
   box-shadow: 0px 2px 4px -2px var(--desaturated-blue);
   border-radius: 24px;
   overflow: hidden;
-
+  background-color: #fff;
 }
 
 .hero {
@@ -93,8 +102,96 @@ body {
 }
 
 .card-body {
-  /* FIX: bottom padding */
-  padding: 24px;
+  padding: 36px 24px 12px;
 }
 
+.header {
+  text-align: center;
+  margin-bottom: 22px;
+  padding: 0 12px;
+  line-height: 24px;
+}
 
+.header h1 {
+  font-size: calc((22 / var(--fz)) * 1rem);
+  margin-bottom: 20px;
+  color: var(--dark-blue);
+}
+
+.header p {
+  color: var(--desaturated-blue);
+}
+
+.price-section {
+  font-size: calc((14 / var(--fz)) * 1rem);
+  background-color: var(--very-pale-blue);
+  border-radius: 16px;
+  padding: 20px 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.price-section img {
+  display: block;
+  margin-right: 24px;
+}
+
+.price-section a {
+  font-weight: 700;
+  opacity: 1;
+  text-decoration: underline;
+  transition: opacity 450ms, text-decoration 450ms;
+}
+
+.price-section a:hover,
+.price-section a:focus {
+  opacity: 0.75;
+  text-decoration: none;
+  transition: opacity 250ms, text-decoration 250ms;
+} 
+
+.payment-plan__text {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.payment-plan__amount {
+  color: var(--desaturated-blue);
+}
+
+.order-actions button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 18px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  font-size: calc((16 / var(--fz)) * 1rem);
+  cursor: pointer;
+  transition: color 450ms;
+}
+
+button:hover,
+button:focus
+{
+  color: var(--dark-blue);
+  transition: color 250ms;
+}
+
+button.primary-btn {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  box-shadow: 0px 16px 24px -4px var(--desaturated-blue);
+  margin-bottom: 16px;
+  transition: opacity 450ms;
+}
+
+button.primary-btn:hover,
+button.primary-btn:focus {
+  opacity: .75;
+  transition: opacity 250ms;
+}
