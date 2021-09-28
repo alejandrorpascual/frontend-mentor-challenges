@@ -85,9 +85,23 @@ body {
   background-size: max(675px, 100%);
 }
 
+@media (min-width: 1440px) {
+  body {
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+}
+
 .wrapper {
-  max-width: calc(var(--mobile) - 44px);
+  --width: var(--mobile);
+  max-width: calc(var(--width) - 44px);
   margin: 100px auto;
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 450px;
+    margin-top: 50px;
+  }
 }
 
 .card {
@@ -103,6 +117,14 @@ body {
 
 .card-body {
   padding: 36px 24px 12px;
+}
+
+@media (min-width: 1440px) {
+  .card-body {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 24px;
+  }
 }
 
 .header {
@@ -144,12 +166,19 @@ body {
   transition: opacity 450ms, text-decoration 450ms;
 }
 
+@media (min-width: 1440px) {
+  .price-section a {
+    text-align: right;
+    width: 100%;
+  }
+}
+
 .price-section a:hover,
 .price-section a:focus {
   opacity: 0.75;
   text-decoration: none;
   transition: opacity 250ms, text-decoration 250ms;
-} 
+}
 
 .payment-plan__text {
   font-weight: 700;
@@ -176,8 +205,7 @@ body {
 }
 
 button:hover,
-button:focus
-{
+button:focus {
   color: var(--dark-blue);
   transition: color 250ms;
 }
@@ -187,11 +215,19 @@ button.primary-btn {
   color: var(--very-pale-blue);
   box-shadow: 0px 16px 24px -4px var(--desaturated-blue);
   margin-bottom: 16px;
-  transition: opacity 450ms;
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity 450ms, transform 450ms;
 }
 
 button.primary-btn:hover,
 button.primary-btn:focus {
-  opacity: .75;
+  opacity: 0.75;
   transition: opacity 250ms;
+}
+
+button.primary-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0px 8px 16px -6px var(--desaturated-blue);
+  transition: transform 150ms, box-shadow 250ms;
 }
