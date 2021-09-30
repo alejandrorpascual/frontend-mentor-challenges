@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('./fonts/Lexend_Deca/LexendDeca-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Big Shoulders Display';
+  font-weight: bold;
+  src: url('./fonts/Big_Shoulders_Display/BigShouldersDisplay-Bold.ttf');
+}
+
+:root {
+  /* Media Queries */
+  --mobile: 375px;
+  --desktop: 1440px;
+
+  /* COLORS */
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%); /* () */
+  --dark-cyan: hsl(184, 100%, 22%); /* () */
+  --very-dark-cyan: hsl(179, 100%, 13%); /* () */
+
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, buttons, headings) */
+
+  /* Font Size */
+  --fz: 15;
+
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+li,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Lexend Deca', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--very-light-gray);
+}
+
+.wrapper {
+  --vertical-margin: 80px;
+  max-width: calc(375px - 44px); /* 22px of horizontal padding */
+  margin: var(--vertical-margin) auto;
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    --vertical-margin: 160px;
+    max-width: 920px;
+    display: flex;
+  }
+}
+
+.card {
+  padding: 45px;
+}
+
+.icon,
+.card-title {
+  margin-bottom: 40px;
+}
+
+.description {
+  margin-bottom: 30px;
+  color: var(--transparent-white);
+  line-height: 1.8;
+}
+
+@media (min-width: 1080px) {
+  .description {
+    margin-bottom: 80px;
+  }
+}
+
+.sedans {
+  --bg-color: var(--bright-orange);
+  background-color: var(--bg-color);
+  border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 1080px) {
+  .sedans {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.suvs {
+  --bg-color: var(--dark-cyan);
+  background-color: var(--bg-color);
+}
+
+.luxury {
+  --bg-color: var(--very-dark-cyan);
+  background-color: var(--bg-color);
+  border-radius: 0 0 8px 8px;
+}
+
+@media (min-width: 1080px) {
+  .luxury {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.card-title {
+  font-family: 'Big Shoulders Display';
+  font-weight: bold;
+  font-size: calc((37 / var(--fz)) * 1rem);
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+}
+
+.card .btn {
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--very-light-gray);
+  color: var(--bg-color);
+  border-radius: 5000px;
+  padding: 15px 30px;
+  font-size: calc((16 / var(--fz)) * 1rem);
+  cursor: pointer;
+  transition: background-color 500ms, color 450ms;
+}
+
+.card .btn:hover,
+.card .btn:focus {
+  background-color: var(--bg-color);
+  color: var(--very-light-gray);
+  transition: background-color 250ms, color 250ms;
+}
