@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-weight: 400;
+  src: url('./assets/fonts/Kumbh_Sans/KumbhSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-weight: 700;
+  src: url('./assets/fonts/Kumbh_Sans/KumbhSans-Bold.ttf');
+}
+
+:root {
+  /*  */
+  --bg-color: hsl(185, 75%, 39%);
+  --text-bold: hsl(229, 23%, 23%);
+  --text-light: hsl(227, 10%, 46%);
+
+  --card-bg: hsla(0, 0%, 100%, 1);
+
+  --shadow-color: hsl(0, 0%, 59%);
+  --stats-top-border: hsl(228, 9%, 92%);
+
+  --fz: 18;
+
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+li,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Kumbh Sans', Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: grid;
+  position: relative;
+  place-content: center;
+  color: var(--text-bold);
+}
+
+p, span {
+  color: var(--text-light);
+}
+
+body::before,
+body::after {
+  position: absolute;
+}
+
+body::before {
+  --diameter: 250px;
+  content: '';
+  background-image: url(./images/bg-pattern-top.svg);
+  transform: rotate(180deg);
+  top: 0;
+  left: 0;
+  height: 410px;
+  width: var(--diameter);
+}
+
+body::after {
+  --diameter: 250px;
+  content: '';
+  background-image: url(./images/bg-pattern-bottom.svg);
+  width: var(--diameter);
+  height: 410px;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.wrapper {
+  width: 326px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  background-color: var(--card-bg);
+  position: relative;
+  padding-top: 92px;
+  border-radius: 15px;
+  box-shadow: 0px 50px 100px -20px hsla(197, 84%, 20%, 0.5);
+  /*to avoid bg-image from in front of borders */
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  background-image: url(./images/bg-pattern-card.svg);
+  height: 140px;
+  width: 100%;
+  top: 0;
+}
+
+.card img {
+  --diameter: 96px;
+  width: var(--diameter);
+  height: var(--diameter);
+  display: block;
+  position: relative;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  border: 5px var(--card-bg) solid;
+}
+
+.card h2 {
+  --font-size: 18;
+  --line-height: 18;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: calc((var(--font-size) / var(--fz)) * 1rem);
+  line-height: calc(var(--line-height) / var(--font-size));
+}
+
+.card h2 > span {
+  font-weight: 400;
+}
+
+.card > p {
+  --font-size: 14;
+  --line-height: 14;
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: calc((var(--font-size) / var(--fz)) * 1rem);
+  line-height: calc(var(--line-height) / var(--font-size));
+}
+
+.stats {
+  border-top: 1px solid var(--stats-top-border);
+  padding: 24px 0;
+}
+
+.stat-wrapper.center {
+  text-align: center;
+  margin: 0 auto;
+  width: 233px;
+  position: relative;
+}
+
+.stat-wrapper.left,
+.stat-wrapper.right {
+  position: absolute;
+}
+
+.stat-wrapper.right {
+  right: 0;
+  top: 0;
+  margin: auto 0;
+}
+
+.stat-wrapper .number {
+  --font-size: 18;
+  --line-height: 18;
+  font-size: calc((var(--font-size) / var(--fz)) * 1rem);
+  line-height: calc(var(--line-height) / var(--font-size));
+  margin-bottom: 9px;
+}
+.stat-wrapper .text {
+  --font-size: 10;
+  --line-height: 10;
+  font-size: calc((var(--font-size) / var(--fz)) * 1rem);
+  line-height: calc(var(--line-height) / var(--font-size));
+  letter-spacing: 1.5px;
+}
