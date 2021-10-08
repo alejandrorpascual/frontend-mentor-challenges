@@ -69,7 +69,8 @@ body {
   color: var(--text-bold);
 }
 
-p, span {
+p,
+span {
   color: var(--text-light);
 }
 
@@ -79,30 +80,60 @@ body::after {
 }
 
 body::before {
-  --diameter: 250px;
   content: '';
   background-image: url(./images/bg-pattern-top.svg);
-  transform: rotate(180deg);
-  top: 0;
-  left: 0;
-  height: 410px;
-  width: var(--diameter);
+  background-repeat: no-repeat;
+  transform: rotateX(90deg) rotateZ(90deg) rotateY(-90deg);
+
+  background-size: 103%;
+  top: -229px;
+  left: -270px;
+  height: 79%;
+  width: 105vw;
+
 }
 
 body::after {
-  --diameter: 250px;
   content: '';
   background-image: url(./images/bg-pattern-bottom.svg);
-  width: var(--diameter);
-  height: 410px;
-  right: 0;
-  bottom: 0;
+  background-repeat: no-repeat;
+
+  background-size: 184%;
+  width: 71vw;
+  height: 94%;
+  right: -83px;
+  bottom: -359px;
+
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  body::before {
+    background-size: 125%;
+    top: -278px;
+    left: -95px;
+    height: 110%;
+    width: 51vw;
+  }
+
+  body::after {
+    background-size: 120%;
+    width: 50vw;
+    height: 50%;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .wrapper {
   width: 326px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 350px;
+  }
 }
 
 .card {
@@ -168,6 +199,12 @@ body::after {
   margin: 0 auto;
   width: 233px;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .stat-wrapper.center {
+    width: 249px;
+  }
 }
 
 .stat-wrapper.left,
