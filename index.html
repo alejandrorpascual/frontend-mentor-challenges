@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" media="all" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="card">
+        <img
+          class="box"
+          src="/images/illustration-box-desktop.svg"
+          alt="box with an @ sign"
+        />
+        <div class="main">
+          <picture class="hero__illustration">
+            <source
+              media="(min-width: 1080px)"
+              srcset="/images/illustration-woman-online-desktop.svg"
+            />
+            <source
+              media="(min-width: 300px)"
+              srcset="/images/illustration-woman-online-mobile.svg"
+            />
+            <img
+              src="/images/illustration-woman-online-mobile"
+              alt="Illustration of a woman in front of computer"
+            />
+          </picture>
+          <div class="accordion" id="accordion">
+            <h1>FAQ</h1>
+            <div class="question">
+              <input
+                id="team_members"
+                type="checkbox"
+                name="faq_accordion"
+                class="accordion__input"
+              />
+              <label for="team_members" class="accordion__label">
+                How many team members can I invite?
+              </label>
+              <div class="accordion__content">
+                <p>
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </div>
+            </div>
+            <div class="question">
+              <input
+                id="max_upload_size"
+                type="checkbox"
+                name="faq_accordion"
+                class="accordion__input"
+              />
+              <label for="max_upload_size" class="accordion__label">
+                What is the maximum file upload size?
+              </label>
+              <div class="accordion__content">
+                <p>
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </div>
+            </div>
+            <div class="question">
+              <input
+                id="reset_password"
+                type="checkbox"
+                name="faq_accordion"
+                class="accordion__input"
+              />
+              <label for="reset_password" class="accordion__label">
+                How do I reset my password?
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </div>
+            </div>
+            <div class="question">
+              <input
+                id="cancel_subscription"
+                type="checkbox"
+                name="faq_accordion"
+                class="accordion__input"
+              />
+              <label for="cancel_subscription" class="accordion__label">
+                Can I cancel my subscription?
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </div>
+            </div>
+            <div class="question">
+              <input
+                id="additional_support"
+                type="checkbox"
+                name="faq_accordion"
+                class="accordion__input"
+              />
+              <label for="additional_support" class="accordion__label">
+                Do you provide additional support?
+              </label>
+              <div class="accordion__content">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
