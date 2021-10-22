@@ -17,19 +17,19 @@ const GlobalStyles = createGlobalStyle`
   @font-face {
     font-family: 'Barlow Condensed';
     font-weight: 400;
-    src: url('..public/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf');
+    src: url('/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf');
   }
 
   @font-face {
     font-family: 'Barlow Condensed';
     font-weight: 700;
-    src: url('..public/fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf');
+    src: url('/fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf');
   }
 
   @font-face {
     font-family: 'Bellefair';
     font-weight: 400;
-    src: url('..public/fonts/Bellefair/Bellefair-Regular.ttf');
+    src: url('/fonts/Bellefair/Bellefair-Regular.ttf');
   }
 
 
