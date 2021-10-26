@@ -16,8 +16,6 @@ function HomePage() {
   )
 }
 
-
-
 const SubTitle = styled.p`
   margin-top: 48px;
   text-transform: uppercase;

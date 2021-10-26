@@ -1,16 +1,23 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-function NavBar() {
+function Header() {
   return (
-    <Nav>
+    <HeaderWrapper>
       <Img src='/shared/logo.svg' height={40} width={40} />
-      <Img src='/shared/icon-hamburger.svg' height={21} width={24} />
-    </Nav>
+      <a
+        href='#sidenav-open'
+        id='sidenav-button'
+        title='Open Menu'
+        aria-label='Open Menu'
+      >
+        <Img src='/shared/icon-hamburger.svg' height={21} width={24} />
+      </a>
+    </HeaderWrapper>
   )
 }
 
-const Nav = styled.nav`
+const HeaderWrapper = styled.header`
   display: flex;
   padding: 24px 24px 0 24px;
   justify-content: space-between;
@@ -28,4 +35,4 @@ const Img = styled(Image)`
   height: ${props => props.height + 'px'};
 `
 
-export default NavBar
+export default Header
