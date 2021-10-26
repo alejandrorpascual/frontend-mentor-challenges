@@ -1,9 +1,8 @@
-import Layout from '@/components/layout'
 import styled from 'styled-components'
 
 function HomePage() {
   return (
-    <Main>
+    <>
       <SubTitle>So, you want to travel to</SubTitle>
       <Title>Space</Title>
       <Desc>
@@ -13,24 +12,11 @@ function HomePage() {
         experience!
       </Desc>
       <Button>Explore</Button>
-    </Main>
+    </>
   )
 }
 
-HomePage.getLayout = function getLayout() {
-  return (
-    <Layout>
-      <HomePage />
-    </Layout>
-  )
-}
 
-const Main = styled.main`
-  width: 100%;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 48px;
-`
 
 const SubTitle = styled.p`
   margin-top: 48px;
@@ -76,9 +62,9 @@ const Button = styled.button`
   letter-spacing: 1.25px;
   text-transform: uppercase;
 
-  /* --------------------------------- */
-  /* FIX: abstract into a <Seprator /> */
-  /* --------------------------------- */
+  /*  ---------------------------------  */
+  /*  FIX: abstract into a <Seprator />  */
+  /*  ---------------------------------  */
   margin-right: auto;
   margin-left: auto;
   margin-top: 81px;
